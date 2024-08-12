@@ -4,15 +4,14 @@
 # Date: 2024-11-08
 
 import sys
-import os
+from pathlib import Path
 
-parent_folder_path = os.path.abspath(os.path.dirname(__file__))
-sys.path.append(parent_folder_path)
-sys.path.append(os.path.join(parent_folder_path, 'lib'))
-sys.path.append(os.path.join(parent_folder_path, 'plugin'))
+plugindir = Path.absolute(Path(__file__).parent)
+paths = (".", "lib", "plugin")
+sys.path = [str(plugindir / p) for p in paths] + sys.path
 
 # app
-from plugin.totp import plugin
+from plugin import plugin
 
 
 plugin.run()

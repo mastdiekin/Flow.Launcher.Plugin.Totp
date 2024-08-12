@@ -4,7 +4,7 @@
     "Name": "Totp",
     "Description": "TOTP Generator (2FA keys)",
     "Author": "Dmitriy Surkov",
-    "Version": "1.0.0",
+    "Version": "1.0.1",
     "Language": "python",
     "Website": "https://github.com/mastdiekin/Flow.Launcher.Plugin.Totp",
     "IcoPath": "Images\\app.png",
