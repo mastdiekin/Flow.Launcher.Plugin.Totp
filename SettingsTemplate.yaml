@@ -6,5 +6,5 @@ body:
       description: >
         Paste links starting with:
         "otpauth-migration://offline?data=..." or "otpauth://..."
-        into this field. Each link on a new line!
+        into this field. Each link should be on a new line!
         After the first installation, be sure to clear this field!
