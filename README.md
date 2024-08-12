@@ -6,12 +6,19 @@
 
 # About
 
-Easily generate TOTP codes from your Google Authenticator data directly within Flow Launcher. This plugin simplifies your multi-factor authentication process by allowing you to quickly access and copy TOTP codes without leaving your workflow. Secure, fast, and convenient, it's the perfect tool for managing your 2FA needs right from your launcher.
+> Easily generate TOTP codes from your Google Authenticator data directly within Flow Launcher. This plugin simplifies your multi-factor authentication process by allowing you to quickly access and copy TOTP codes without leaving your workflow. Secure, fast, and convenient, it's the perfect tool for managing your 2FA needs right from your launcher.
 
 ![screenshot](./assets/screenshot.png)
 ![preview](./assets/preview.gif)
 
 ## Installation
+
+### Installation from gui
+```bash
+pm install Totp
+```
+
+### Manual installation
 1. Download plugin from Release
 2. Extract it to `%APPDATA%\FlowLauncher\Plugins\`
 3. Install dependencies:
