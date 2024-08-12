@@ -1,0 +1,10 @@
+body:
+  - type: textarea
+    attributes:
+      name: otpauthLinks
+      label: Migration links
+      description: >
+        Paste links starting with:
+        "otpauth-migration://offline?data=..." or "otpauth://..."
+        into this field. Each link on a new line!
+        After the first installation, be sure to clear this field!

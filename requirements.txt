@@ -1,0 +1,4 @@
+pyflowlauncher==0.9.2
+pyotp==2.9.0
+pyperclip==1.8.2
+protobuf==4.22.1

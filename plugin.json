@@ -1,0 +1,12 @@
+{
+    "ID": "D58F8A08-0C0A-45C3-8690-F7C7877EE611",
+    "ActionKeyword": "[",
+    "Name": "Totp",
+    "Description": "TOTP Generator (2FA keys)",
+    "Author": "Dmitriy Surkov",
+    "Version": "1.0.0",
+    "Language": "python",
+    "Website": "https://github.com/mastdiekin/Flow.Launcher.Plugin.Totp",
+    "IcoPath": "Images\\app.png",
+    "ExecuteFileName": "main.py"
+}
