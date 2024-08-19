@@ -19,23 +19,33 @@ jobs:
         uses: actions/setup-python@v2
         with:
           python-version: ${{ matrix.python-version }}
+
       - name: get version
         id: version
         uses: notiz-dev/github-action-json-property@release
         with: 
           path: 'plugin.json'
           prop_path: 'Version'
+
+      - name: Future dist name of the plugin
+        id: plugin_dist_filename
+        run: |
+          DIST_FILENAME=Flow.Launcher.Plugin.Totp_v${{steps.version.outputs.prop}}.zip
+          echo "Dist is: $DIST_FILENAME"
+          echo "DIST_FILENAME=$DIST_FILENAME" >> $GITHUB_ENV
+
       - run: echo ${{steps.version.outputs.prop}} 
       - name: Install dependencies
         run: |
           python -m pip install --upgrade pip
           pip install -r ./requirements.txt -t ./lib
-          zip -r Flow.Launcher.Plugin.Totp.zip . -x '*.git*' -x 'assets/*'
+          zip -r ${{ env.DIST_FILENAME }} . -x '*.git*' -x 'assets/*'
+
       - name: Publish
         if: success()
         uses: softprops/action-gh-release@v1
         with:
-          files: 'Flow.Launcher.Plugin.Totp.zip'
+          files: ${{ env.DIST_FILENAME }}
           tag_name: "v${{steps.version.outputs.prop}}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
